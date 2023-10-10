@@ -8,4 +8,5 @@ while($linha = mysqli_fetch_assoc($query)){
     echo $linha["descricao"],"<a href=".'./editar/editarprod_form.php?id='.$linha['idproduto'].">[editar]</a>
     <a href=".'./excluir/excluir.php?id='.$linha['idproduto'].">[excluir]</a>","<br><br>";
 }
+echo '<a href="../home.php">voltar</a>';
 ?>

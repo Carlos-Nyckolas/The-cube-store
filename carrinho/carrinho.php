@@ -16,12 +16,13 @@ require "../query.php";
     </head>
     <body class="bg-[url('../imagens/fundo_site.png')]">
     <div class="">
-    <h1 class="mb-10 text-center text-2xl font-bold">Carrinho</h1>
     <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
       <div class="rounded-lg md:w-2/3">
-        <?php while($linha=mysqli_fetch_assoc($query)): 
-            $soma = 0;
-            $frete = 10;
+        <?php
+          $soma = 0;
+          $frete = 10;
+        while($linha=mysqli_fetch_assoc($query)): 
+           
             $soma = $soma + $linha["preco"]?>
         <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
           <img src="../<?= $linha["img"]?>" alt="product-image" class="w-full rounded-lg sm:w-40" />
