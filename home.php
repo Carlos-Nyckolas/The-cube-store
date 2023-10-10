@@ -16,7 +16,7 @@ require "conexao.php"; $comando = "SELECT*FROM produto"; require "query.php";
                 <div class="w-screen flex flex-row items-center p-2 justify-between bg-gray-400 shadow-xs">
                     
                     <div class="ml-8 text-lg text-gray-700 hidden md:flex">
-                        <a href="index.php">
+                        <a href="home.php">
                             <div class="flex items-center gap-3">
                                 <img src="imagens/cubo-logo.jpg" class="w-[60px] h-[60px] ">
                                 <span class="font-bold text-blue-900 hover:text-blue-100">Cube Store</span>
@@ -34,11 +34,12 @@ require "conexao.php"; $comando = "SELECT*FROM produto"; require "query.php";
                         <?php if($_SESSION["idacesso"]==1){?>
                         <div class="flex flex-row-reverse mr-8 hidden md:flex">
                             <a href="./modificarprods/todosprod.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Produtos</a>
+                            <a href="./sair.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Sair</a>
                         </div>
                         <?php }elseif($_SESSION["idacesso"]==2){?>
                         <div class="flex flex-row-reverse mr-8 hidden md:flex">
                             <a href="./carrinho/carrinho.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="imagens/carrinho.png" class="w-[40px] h-[40px] "></a>
-                            
+                            <a href="./sair.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Sair</a>
                         </div>
                         <?php } ?>
             </div>
@@ -46,7 +47,7 @@ require "conexao.php"; $comando = "SELECT*FROM produto"; require "query.php";
         <main class="flex flex-wrap">
             <?php while($linha = mysqli_fetch_assoc($query)): ?>
             <div class="m-3 bg-gray-100/75">
-                <div class=" m-3  w-[300px]">
+                <div class=" m-3  w-[330px]">
                     <div class="group relative">
                         <div class="aspect-h-1 aspect-w-1 w-full rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="<?php  echo $linha["img"];?>"  class="h-full w-full object-cover object-center lg:h-full lg:w-full">
