@@ -54,8 +54,8 @@ require "conexao.php"; $comando = "SELECT*FROM produto"; require "query.php";
                         <div>
                             <h3 class="text-sm text-gray-700">
                             <a href="./verprod/vizuprod.php?id=<?= $linha["idproduto"];?>&titulo=<?=$linha["titulo"];?>&preco=<?=$linha["preco"];?>&descricao=<?=$linha["descricao"]?>&img=<?=$linha["img"]?>">
-                                <span aria-hidden="true" class="absolute inset-0"></span>
-                                <span><?php echo $linha["titulo"];?></span>
+                                <span aria-hidden="true" class=" absolute inset-0"></span>
+                                <span class="font-bold"><?php echo $linha["titulo"];?></span>
                             </a>
                             </h3>
                             <p class="mt-1 text-sm text-gray-500"><?php echo $linha["descricao"]; ?></p>

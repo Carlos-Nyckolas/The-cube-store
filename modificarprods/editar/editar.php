@@ -10,7 +10,7 @@ $titulo =$_POST["titulo"];
 $descricao =$_POST["descricao"];
 $preco =$_POST["preco"];
 
-if(isset($_FILES["img"])){
+if($_FILES["img"]["size"]>0){
     $img =$_FILES["img"];
     $nome = $img["name"];
     $tmp_name = $img["tmp_name"];
@@ -19,7 +19,9 @@ if(isset($_FILES["img"])){
     $caminho = "imagens/$nome";
     echo 1;
 }else{
+    require "../../conexao.php";
     $comando = "SELECT*FROM produto where idproduto = $id";
+    require "../../query.php";
     $linha=mysqli_fetch_assoc($query);
     $caminho =$linha["img"];
     echo 2;

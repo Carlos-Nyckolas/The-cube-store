@@ -11,7 +11,7 @@ $comando2 = "SELECT*FROM imgprod where idproduto=$id";
 $query = mysqli_query($conexao,$comando2);
 ?> 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,9 +19,9 @@ $query = mysqli_query($conexao,$comando2);
         <script>tailwind.config = {theme: {extend: {colors: {clifford: '#da373d',}}}}</script>
         <title>Document</title>
     </head>
-    <body>
+    <body class="bg-[url('../imagens/fundo_site.png')]">
         <section class="py-10 font-poppins dark:bg-gray-800">
-            <div class="max-w-6xl px-4 mx-auto">
+            <div class="  bg-gray-200/90 p-5 rounded-3xl max-w-6xl px-4 mx-auto">
                 <div class="flex flex-wrap mb-24 -mx-4">
                     <div class="w-full px-4 mb-8 md:w-1/2 md:mb-0">
                         <div class="sticky top-0 overflow-hidden ">
