@@ -28,7 +28,7 @@ $query = mysqli_query($conexao,$comando2);
                     <div class="w-screen flex flex-row items-center p-2 justify-between bg-gray-400 shadow-xs">
                         
                         <div class="ml-8 text-lg text-gray-700 hidden md:flex">
-                            <a href="home.php">
+                            <a href="../home.php">
                                 <div class="flex items-center gap-3">
                                     <img src="../imagens/cubo-logo.jpg" class="w-[60px] h-[60px] ">
                                     <span class="font-bold text-blue-900 hover:text-blue-100">Cube Store</span>
