@@ -10,7 +10,7 @@ require "conexao.php"; $comando = "SELECT*FROM produto"; require "query.php";
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = {theme: {extend: {colors: {clifford: '#da373d',}}}}</script>
     </head>
-    <body class="overflow-x-hidden overflow-y-auto">
+    <body class="bg-[url('imagens/fundo_site.png')] overflow-x-hidden overflow-y-auto ">
         <header>
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
                 <div class="w-screen flex flex-row items-center p-2 justify-between bg-gray-400 shadow-xs">
@@ -45,7 +45,7 @@ require "conexao.php"; $comando = "SELECT*FROM produto"; require "query.php";
         </header>
         <main class="flex flex-wrap">
             <?php while($linha = mysqli_fetch_assoc($query)): ?>
-            <div class="bg-white">
+            <div class="m-3 bg-gray-100/75">
                 <div class=" m-3  w-[300px]">
                     <div class="group relative">
                         <div class="aspect-h-1 aspect-w-1 w-full rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">

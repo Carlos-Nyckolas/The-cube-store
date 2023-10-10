@@ -8,14 +8,23 @@
 $id =$_POST["id"];
 $titulo =$_POST["titulo"];
 $descricao =$_POST["descricao"];
-$img =$_FILES["img"];
 $preco =$_POST["preco"];
 
-$nome = $img["name"];
-$tmp_name = $img["tmp_name"];
-$caminho = "../../imagens/";
-move_uploaded_file($tmp_name, $caminho.$nome);
-$caminho = "imagens/$nome";
+if(isset($_FILES["img"])){
+    $img =$_FILES["img"];
+    $nome = $img["name"];
+    $tmp_name = $img["tmp_name"];
+    $caminho = "../../imagens/";
+    move_uploaded_file($tmp_name, $caminho.$nome);
+    $caminho = "imagens/$nome";
+    echo 1;
+}else{
+    $comando = "SELECT*FROM produto where idproduto = $id";
+    $linha=mysqli_fetch_assoc($query);
+    $caminho =$linha["img"];
+    echo 2;
+}
+
 
 require "../../conexao.php"; 
 $comando = "UPDATE produto SET titulo='$titulo', descricao='$descricao', img='$caminho', preco='$preco' WHERE idproduto = $id"; 
