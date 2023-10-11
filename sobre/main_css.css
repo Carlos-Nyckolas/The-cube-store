@@ -46,3 +46,26 @@
     display: flex;
     align-items: center;
 }
+#nome-do-site{
+    font-family:'Chakra Petch', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    transition: color 0.7s;
+}
+#nome-do-site:hover{
+    color:rgb(177, 0, 44);
+    transition: color 0.5s;
+}
+#logo{
+    height: 80px;
+    width: 80px;
+    margin-left: 5px;
+}
+#sobre-nos{
+    background: rgb(250, 40, 40);
+    border-radius: 25px;
+    padding: 1vw 1vh;
+    color: #000;
+    align-items: center;
+    font-size: larger;
+}

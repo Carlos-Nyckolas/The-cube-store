@@ -46,7 +46,7 @@
         <main class="flex flex-wrap">
                 <?php while($linha = mysqli_fetch_assoc($query)): ?>
             <div class="m-3 bg-gray-100/75">
-                <div class=" m-3  w-[330px]">
+                <div class=" m-3  w-[25vw]">
                     <div class="group relative">
                         <div class="aspect-h-1 aspect-w-1 w-full rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="<?php  echo $linha["img"];?>"  class="h-full w-full object-cover object-center lg:h-full lg:w-full">
