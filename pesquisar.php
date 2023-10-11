@@ -22,7 +22,7 @@ require "query.php";?>
                     <div class="ml-8 text-lg text-gray-700 hidden md:flex">
                         <a href="home.php">
                             <div class="flex items-center gap-3">
-                                <img src="https://icon-library.com/images/rubik-icon/rubik-icon-16.jpg" class="w-[60px] h-[60px] ">
+                                <img src="./imagens/logo.png" class="w-[60px] h-[60px] ">
                                 <span class="font-bold text-blue-900 hover:text-blue-100">Cube Store</span>
                             </div>
                         </a>
