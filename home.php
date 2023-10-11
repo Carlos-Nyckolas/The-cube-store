@@ -68,5 +68,32 @@ require "conexao.php"; $comando = "SELECT*FROM produto"; require "query.php";
         </div>
     <?php endwhile;?>
         </main>
+        <footer class="bg-white dark:bg-gray-900">
+    <div class="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+              <a href="#" class="flex items-center">
+                  <img src="./imagens/logo.png" class="h-10 mr-3" alt="The cube store Logo" />
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">The-cube-store</span>
+              </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Siga-nos</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://github.com/Carlos-Nyckolas" class="hover:underline ">Github: Carlos Nyckolas</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://github.com/melisssa-caf" class="hover:underline ">Github: Melissa de Jesus</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="./sobre-nos.php" class="hover:underline ">Sobre</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+</footer>
     </body>
 </html>
