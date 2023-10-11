@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 
 header{
     margin: 2.5vh 2.5vw 0px 2.5vw;
@@ -38,15 +37,8 @@ main{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-#footer{
-    display: flex;
-    margin-top: 10vh;
-    border-bottom: #fff solid 5vh;
-    width:100%;
-    height: 35vh;
-    background-color: #cae0ee;
-    justify-content: space-around;
-}
+
+
 #sobre-nos{
     background: rgb(250, 40, 40);
     border-radius: 25px;
@@ -213,15 +205,6 @@ body{
     width: 240px;
 
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -412,39 +395,22 @@ div{
 
 
 
-#wall{
-    background-color: #fff;
-    font-size:large;
-}
-#fundo{
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.figs{
-    width:30vw;
-}
-.sobre{
-    width: 70vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 5vh;
-}
-.texto-sobre{
-    border-radius: 25px;
-    background-color: rgb(238, 228, 204);
-    width:35vw;
-    padding:2.5vw;
-}
-#cita{
-    font-style: italic;
-}
-#img-cubo{
-    width:15vw;
-}
-#voltar{
-    display: flex;
-    align-items: center;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
