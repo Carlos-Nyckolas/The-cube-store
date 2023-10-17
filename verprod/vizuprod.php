@@ -10,8 +10,7 @@ $img = $_GET["img"];
 require "../conexao.php";
 $comando = "SELECT*FROM produto where idproduto=$id"; 
 require "../query.php";
-$comando2 = "SELECT*FROM imgprod where idproduto=$id";
-$query = mysqli_query($conexao,$comando2);
+
 ?> 
 <!DOCTYPE html>
 <html lang="PT-BR">
@@ -108,7 +107,7 @@ $query = mysqli_query($conexao,$comando2);
                                             </div>
                                         </div>
                                     </div>
-                                        <a href="#" class="w-full px-4 py-3 text-center text-blue-600 bg-blue-100 border border-blue-600 dark:hover:bg-gray-900 dark:text-gray-400 dark:border-gray-700 dark:bg-gray-700 hover:bg-blue-600 hover:text-gray-100 lg:w-1/2 rounded-xl">Adicionar ao carrinho</a>
+                                        <a href="../carrinho/carrinho.php?id=<?$id?>" class="w-full px-4 py-3 text-center text-blue-600 bg-blue-100 border border-blue-600 dark:hover:bg-gray-900 dark:text-gray-400 dark:border-gray-700 dark:bg-gray-700 hover:bg-blue-600 hover:text-gray-100 lg:w-1/2 rounded-xl">Adicionar ao carrinho</a>
                             </div>
                             <div class="flex gap-4 mb-6">
                                     <a href="#" class="w-full px-4 py-3 text-center text-gray-100 bg-blue-600 border border-transparent dark:border-gray-700 hover:border-blue-500 hover:text-blue-700 hover:bg-blue-100 dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-900 rounded-xl">Compre agora</a>

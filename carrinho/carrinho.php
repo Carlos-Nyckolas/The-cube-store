@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require "../conexao.php"; 
-$comando = "SELECT*FROM produto"; 
+$comando = "SELECT*FROM produto";
 require "../query.php";
 ?> 
 <!DOCTYPE html>

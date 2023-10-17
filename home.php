@@ -10,7 +10,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script>tailwind.config = {theme: {extend: {colors: {clifford: '#da373d',}}}}</script>
         </head>
-    <body class="bg-[url('imagens/fundo_site.png')] overflow-x-hidden overflow-y-auto ">
+    <body class="bg-[url('imagens/fundo_site.png')] overflow-x-hidden overflow-y-auto">
         <header>
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
                 <div class="w-screen flex flex-row items-center p-2 justify-between bg-gray-400 shadow-xs">
@@ -36,7 +36,7 @@
                         <a href="./sair.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Sair</a>
                     </div>
                         <?php }elseif($_SESSION["idacesso"]==2){?>
-                    <div class="flex flex-row-reverse mr-8 hidden md:flex">
+                    <div class="flex flex-row-reverse items-center mr-8 hidden md:flex ">
                         <a href="./carrinho/carrinho.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="imagens/carrinho.png" class="w-[40px] h-[40px] "></a>
                         <a href="./sair.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Sair</a>
                     </div>
@@ -46,7 +46,7 @@
         <main class="flex flex-wrap">
                 <?php while($linha = mysqli_fetch_assoc($query)): ?>
             <div class="m-3 bg-gray-100/75">
-                <div class=" m-3  w-[25vw]">
+                <div class=" m-3  w-[22vw]">
                     <div class="group relative">
                         <div class="aspect-h-1 aspect-w-1 w-full rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="<?php  echo $linha["img"];?>"  class="h-full w-full object-cover object-center lg:h-full lg:w-full">
@@ -67,7 +67,7 @@
             </div>
                 <?php endwhile;?>
         </main>
-        <footer class="bg-white dark:bg-gray-900">
+        <footer class="bg-white dark:bg-gray-900 w-[100vw]">
             <div class="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
                 <div class="md:flex md:justify-between">
                     <div class="mb-6 md:mb-0">

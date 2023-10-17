@@ -7,8 +7,6 @@ session_start();
     
 $id = $_GET["id"];
 require "../../conexao.php"; 
-$comando2 = "DELETE FROM imgprod WHERE idproduto = $id";
-$query2 = mysqli_query($conexao,$comando2);
 $comando = "DELETE FROM produto WHERE idproduto = $id "; 
 require "../../query.php";
 if(!$query){

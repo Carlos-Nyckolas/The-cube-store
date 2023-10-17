@@ -40,7 +40,7 @@ require "query.php";?>
                         <a href="./sair.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Sair</a>
                     </div>
                         <?php }elseif($_SESSION["idacesso"]==2){?>
-                    <div class="flex flex-row-reverse mr-8 hidden md:flex">
+                    <div class="flex flex-row-reverse  items-center mr-8 hidden md:flex">
                         <a href="./carrinho/carrinho.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="imagens/carrinho.png" class="w-[40px] h-[40px] "></a>
                         <a href="./sair.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Sair</a>
                     </div>
@@ -71,7 +71,7 @@ require "query.php";?>
             </div>
                 <?php endwhile;?>
         </main>
-        <footer class="bg-white dark:bg-gray-900">
+        <footer class="bg-white dark:bg-gray-900 w-[100vw]">
             <div class="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
                 <div class="md:flex md:justify-between">
                     <div class="mb-6 md:mb-0">
