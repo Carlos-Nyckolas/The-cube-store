@@ -48,8 +48,7 @@ require "../query.php";
                             </div>
                             <?php }elseif($_SESSION["idacesso"]==2){?>
                             <div class="flex flex-row-reverse mr-8 hidden md:flex">
-                                <a href="./carrinho/carrinho.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="imagens/carrinho.png" class="w-[40px] h-[40px] "></a>
-                                
+                                <a href="../carrinho/carrinho.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="../imagens/carrinho.png" class="w-[40px] h-[40px] "></a>
                             </div>
                             <?php } ?>
                 </div>
@@ -61,7 +60,7 @@ require "../query.php";
                         <div class="sticky top-0 overflow-hidden ">
                             <div class="relative mb-6 lg:mb-10 lg:h-96">
                                 <a class="absolute left-0 transform lg:ml-2 top-1/2 translate-1/2" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 text-blue-500 bi bi-chevron-left dark:text-blue-200" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="w-5 h-5 text-blue-500 bi bi-chevron-left dark:text-blue-200" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z">
                                     </path>
                                     </svg>
@@ -92,23 +91,26 @@ require "../query.php";
                                     <span>
                                         R$<?php echo $preco?>
                                     </span>
-                            </div>
-                                <div class="flex flex-wrap items-center mb-6">
-                                    <div class="mb-4 mr-4 lg:mb-0">
-                                        <div class="w-28">
-                                            <div class="relative flex flex-row w-full h-10 bg-transparent rounded-lg">
-                                                <button class="w-20 h-full text-gray-600 bg-gray-100 border-r rounded-l outline-none cursor-pointer dark:border-gray-700 dark:hover:bg-gray-700 dark:text-gray-400 hover:text-gray-700 dark:bg-gray-900 hover:bg-gray-300">
-                                                    <span class="m-auto text-2xl font-thin">-</span>
-                                                </button>
-                                                    <input type="number" class="flex items-center w-full font-semibold text-center text-gray-700 placeholder-gray-700 bg-gray-100 outline-none dark:text-gray-400 dark:placeholder-gray-400 dark:bg-gray-900 focus:outline-none text-md hover:text-black" value="1">
-                                                    <button class="w-20 h-full text-gray-600 bg-gray-100 border-l rounded-r outline-none cursor-pointer dark:border-gray-700 dark:hover:bg-gray-700 dark:text-gray-400 dark:bg-gray-900 hover:text-gray-700 hover:bg-gray-300">
-                                                    <span class="m-auto text-2xl font-thin">+</span>
-                                                </button>
+                                </div>
+                                <form action="../carrinho/add_carrinho.php" method="post">
+                                    <div class="flex flex-wrap items-center mb-6">
+                                        <div class="mb-4 mr-4 lg:mb-0">
+                                            <div class="w-28">
+                                                <div class="relative flex flex-row w-full h-10 bg-transparent rounded-lg">
+                                                    <button disabled class="w-20 h-full text-gray-600 bg-gray-100 border-r rounded-l outline-none cursor-pointer dark:border-gray-700 dark:hover:bg-gray-700 dark:text-gray-400 hover:text-gray-700 dark:bg-gray-900 hover:bg-gray-300">
+                                                        <span class="m-auto text-2xl font-thin">-</span>
+                                                    </button>
+                                                        <input type="number" name="quantidade" class="flex items-center w-full font-semibold text-center text-gray-700 placeholder-gray-700 bg-gray-100 outline-none dark:text-gray-400 dark:placeholder-gray-400 dark:bg-gray-900 focus:outline-none text-md hover:text-black" value="1">
+                                                    <button disabled class="w-20 h-full text-gray-600 bg-gray-100 border-l rounded-r outline-none cursor-pointer dark:border-gray-700 dark:hover:bg-gray-700 dark:text-gray-400 dark:bg-gray-900 hover:text-gray-700 hover:bg-gray-300">
+                                                        <span class="m-auto text-2xl font-thin">+</span>
+                                                    </button>
+                                                </div>
+                                                <input type="hidden" name="id" value="<?=$id?>">
                                             </div>
                                         </div>
+                                        <button type="submit" class="w-full px-4 py-3 text-center text-blue-600 bg-blue-100 border border-blue-600 dark:hover:bg-gray-900 dark:text-gray-400 dark:border-gray-700 dark:bg-gray-700 hover:bg-blue-600 hover:text-gray-100 lg:w-1/2 rounded-xl">Adicionar ao carrinho</button>
                                     </div>
-                                        <a href="../carrinho/carrinho.php?id=<?$id?>" class="w-full px-4 py-3 text-center text-blue-600 bg-blue-100 border border-blue-600 dark:hover:bg-gray-900 dark:text-gray-400 dark:border-gray-700 dark:bg-gray-700 hover:bg-blue-600 hover:text-gray-100 lg:w-1/2 rounded-xl">Adicionar ao carrinho</a>
-                            </div>
+                                </form>
                             <div class="flex gap-4 mb-6">
                                     <a href="#" class="w-full px-4 py-3 text-center text-gray-100 bg-blue-600 border border-transparent dark:border-gray-700 hover:border-blue-500 hover:text-blue-700 hover:bg-blue-100 dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-900 rounded-xl">Compre agora</a>
                             </div>

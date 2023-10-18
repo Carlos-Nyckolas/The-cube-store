@@ -11,7 +11,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
             header('location: login_form.php');
         }else{
             $linha = mysqli_fetch_assoc($result);
-            $_SESSION["iduser"] = $linha["iduser"];
+            $_SESSION["iduser"] = $linha["idusuario"];
             $_SESSION["idacesso"] = $linha["idacesso"];
             header('location: ../home.php');
         }
