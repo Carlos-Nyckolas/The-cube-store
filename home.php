@@ -43,7 +43,7 @@
                         <?php } ?>
                 </div>
         </header>
-        <main class="flex flex-wrap justify-center">
+        <main class="grid grid-cols-4 p-4">
                 <?php while($linha = mysqli_fetch_assoc($query)): ?>
             <div class="m-3 bg-gray-100/75">
                 <div class=" m-3  w-[22vw]">
