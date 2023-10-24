@@ -10,8 +10,8 @@
         <div class="sobre">
             <span class="texto-sobre">
                 Os desenvolvedores desse site são Melissa J. Cafundó (17) e Carlos N. Romão (16), 
-                dois alunos do 1º ano de informática do IFSP Câmpus Itapetininga.
-                O site foi criado para um projeto de desenvolvimento front-end de Programação Web 1.
+                dois alunos do 2º ano de informática do IFSP Câmpus Itapetininga.
+                O site foi criado para um projeto de desenvolvimento front-end  e back-end de Programação Web 2.
             </span>
             <img class="figs" src="../imagens/nos.png" alt="ilustração dos autores">
         </div>

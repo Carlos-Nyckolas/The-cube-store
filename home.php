@@ -32,7 +32,7 @@
                     </div >
                         <?php if($_SESSION["idacesso"]==1){?>
                     <div class="flex flex-row-reverse mr-8 hidden md:flex">
-                        <a href="./modificarprods/todosprod.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Produtos</a>
+                        <a href="./modificarprods/todosprod.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Gerenciar</a>
                         <a href="./sair.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Sair</a>
                     </div>
                         <?php }elseif($_SESSION["idacesso"]==2){?>
@@ -53,7 +53,7 @@
                         </div>
                         <div>
                             <h3 class="text-sm text-gray-700">
-                            <a href="./verprod/vizuprod.php?id=<?= $linha["idproduto"];?>&titulo=<?=$linha["titulo"];?>&preco=<?=$linha["preco"];?>&descricao=<?=$linha["descricao"]?>&img=<?=$linha["img"]?>">
+                            <a href="./verprod/vizuprod.php?id=<?= $linha["idproduto"];?>">
                                 <span aria-hidden="true" class=" absolute inset-0"></span>
                                 <span class="font-bold"><?php echo $linha["titulo"];?></span>
                             </a>
@@ -67,7 +67,7 @@
             </div>
                 <?php endwhile;?>
         </main>
-        <footer class="bg-white dark:bg-gray-900 w-[100vw] fixed bottom-0">
+        <footer class="bg-white dark:bg-gray-900 w-[100vw]">
             <div class="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
                 <div class="md:flex md:justify-between">
                     <div class="mb-6 md:mb-0">
@@ -76,22 +76,26 @@
                             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">The-cube-store</span>
                         </a>
                     </div>
-                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Siga-nos</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="https://github.com/Carlos-Nyckolas" class="hover:underline ">Github: Carlos Nyckolas</a>
-                      </li>
-                      <li class="mb-4">
-                          <a href="https://github.com/melisssa-caf" class="hover:underline ">Github: Melissa de Jesus</a>
-                      </li>
-                      <li class="mb-4">
-                          <a href="./sobre/sobre-nos.php" class="hover:underline ">Sobre</a>
-                      </li>
-                  </ul>
-            </div>
-            </div>
+                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                        <div>
+                            <a class="font-bold text-blue-900 hover:text-red-500" href="modificarprods/feedback/feedback.php">Deixe seu feedback!</a>
+                        </div>  
+                        <div flex flex-col>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Siga-nos</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="https://github.com/Carlos-Nyckolas" class="hover:underline ">Github: Carlos Nyckolas</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="https://github.com/melisssa-caf" class="hover:underline ">Github: Melissa de Jesus</a>
+                                </li>
+                                <li class="mb-4">
+                                    <a href="./sobre/sobre-nos.php" class="hover:underline ">Sobre</a>
+                                </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
     </body>

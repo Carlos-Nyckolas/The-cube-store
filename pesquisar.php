@@ -53,14 +53,14 @@ require "query.php";?>
         <main class="grid grid-cols-4 p-4">
             <?php while($linha = mysqli_fetch_assoc($query)):?>
             <div class="m-3 bg-gray-100/75">
-                <div class=" m-3  w-[330px]">
+                <div class=" m-3  w-[22vw]">
                     <div class="group relative">
                         <div class="aspect-h-1 aspect-w-1 w-full rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                             <img src="<?php  echo $linha["img"];?>"  class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                         </div>
                         <div>
                             <h3 class="text-sm text-gray-700">
-                                <a href="./verprod/vizuprod.php?id=<?= $linha["idproduto"];?>&titulo=<?=$linha["titulo"];?>&preco=<?=$linha["preco"];?>&descricao=<?=$linha["descricao"]?>&img=<?=$linha["img"]?>">
+                                <a href="./verprod/vizuprod.php?id=<?= $linha["idproduto"];?>">
                                     <span aria-hidden="true" class="absolute inset-0"></span>
                                     <span><?php echo $linha["titulo"];?></span>
                                 </a>
@@ -74,7 +74,7 @@ require "query.php";?>
             </div>
                 <?php endwhile;?>
         </main>
-        <footer class="bg-white dark:bg-gray-900 w-[100vw] fixed bottom-0">
+        <footer class="bg-white dark:bg-gray-900 w-[100vw]">
             <div class="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
                 <div class="md:flex md:justify-between">
                     <div class="mb-6 md:mb-0">
@@ -85,6 +85,9 @@ require "query.php";?>
                     </div>
                     <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
+                            <a class="font-bold text-blue-900 hover:text-red-500" href="modificarprods/feedback/feedback.php">Deixe seu feedback!</a>
+                        </div>  
+                        <div flex flex-col>
                             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Siga-nos</h2>
                             <ul class="text-gray-500 dark:text-gray-400 font-medium">
                                 <li class="mb-4">
@@ -96,10 +99,11 @@ require "query.php";?>
                                 <li class="mb-4">
                                     <a href="./sobre/sobre-nos.php" class="hover:underline ">Sobre</a>
                                 </li>
-                            </ul>
+                                </ul>
                         </div>
                     </div>
                 </div>
+            </div>
         </footer>
     </body>
 </html>

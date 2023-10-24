@@ -3,13 +3,10 @@ session_start();
 ?> 
 <?php
 $id = $_GET["id"];
-$titulo = $_GET["titulo"];
-$preco = $_GET["preco"];
-$descricao = $_GET["descricao"];
-$img = $_GET["img"];
 require "../conexao.php";
-$comando = "SELECT*FROM produto where idproduto=$id"; 
+$comando = "SELECT*FROM produto where idproduto=$id";
 require "../query.php";
+$linha=mysqli_fetch_assoc($query);
 
 ?> 
 <!DOCTYPE html>
@@ -66,7 +63,7 @@ require "../query.php";
                                     </svg>
                                 </a>
 
-                                <img class="object-contain w-full lg:h-full" src="../<?php echo $img ?>" alt="">
+                                <img class="object-contain w-full lg:h-full" src="../<?php echo $linha["img"] ?>" alt="">
 
                                 <a class="absolute right-0 transform lg:mr-2 top-1/2 translate-1/2" href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="w-5 h-5 text-blue-500 bi bi-chevron-right dark:text-blue-200" viewBox="0 0 16 16">
@@ -82,14 +79,14 @@ require "../query.php";
                             <div class="mb-6 ">
                                 <span class="px-2.5 py-0.5 text-xs text-blue-600 bg-blue-100 dark:bg-gray-700 rounded-xl dark:text-gray-200">Cubos</span>
                                     <h1 class="mt-6 mb-6 font-bold leading-loose tracking-wide text-gray-700 md:text-5xl dark:text-gray-300">
-                                        <?php echo $titulo; ?>
+                                        <?php echo $linha["titulo"]; ?>
                                     </h1>
                                     <h2 class="max-w-xl mt-6 mb-6 font-semibold leading-loose tracking-wide text-gray-700 md:text-2xl dark:text-gray-300">
-                                        <?php echo $descricao?>
+                                        <?php echo $linha["descricao"]; ?>
                                     </h2>
                                     <p class="inline-block text-2xl font-semibold text-gray-700 dark:text-gray-400 ">
                                     <span>
-                                        R$<?php echo $preco?>
+                                        R$<?php echo $linha["preco"]?>
                                     </span>
                                 </div>
                                 <form action="../carrinho/add_carrinho.php" method="post">

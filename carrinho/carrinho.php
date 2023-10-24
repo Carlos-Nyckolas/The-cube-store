@@ -26,12 +26,15 @@ require "../query.php";
                   while($linha=mysqli_fetch_assoc($query)): 
                   $soma = $soma + ($linha["preco"]*$linha["quantidade"]);
                 ?>
-              <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+              <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex ">
                   <img src="../<?= $linha["img"]?>" alt="product-image" class="w-full rounded-lg sm:w-40" />
                   <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
                     <div class="mt-5 sm:mt-0">
                       <h2 class="text-lg font-bold text-gray-900"><?= $linha["titulo"] ?></h2>
                       <p class="mt-1 text-xs text-gray-700"><?= $linha["descricao"]?></p>
+                    </div>
+                    <div class="px-2.5 py-0.25 h-[2vh] text-xs text-blue-600 bg-blue-100 dark:bg-gray-700 rounded-xl dark:text-gray-200">
+                      <a href="editar_form.php?qnt=<?=$linha["quantidade"]?>&id=<?=$linha["idcarrinho"]?>">Editar</a>
                     </div>
                     <div class="mt-4 flex justify-between im sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                       <div class="flex items-center border-gray-100">

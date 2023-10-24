@@ -1,15 +1,14 @@
 <?php
 require "../conexao.php";
-$id=$_GET["id"];
-
-$comando="DELETE  FROM carrinho WHERE idcarrinho = $id";
+$qnt=$_POST["qnt"];
+$id=$_POST["id"];
+$comando="UPDATE carrinho SET quantidade=$qnt WHERE idcarrinho = $id";
 
 require "../query.php";
- if($query){
+if($query){
     header('Location: carrinho.php');
- }else{
+}else{
     echo "FATAL ERROR";
     echo '<a href="carrinho.php">Voltar</a>';
- }
-
+}
 ?>
