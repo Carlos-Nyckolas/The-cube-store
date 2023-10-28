@@ -29,6 +29,7 @@
                         </form>
                     </div>
                 </div>
+                <a class="py-4 text-indigo-500" href="user/editarform1.php">Esqueceu sua senha?</a>
                 <a class="py-4 text-indigo-500" href="../index.php">Não possui uma conta? Cadastre-se</a>
             </div>
         </div>

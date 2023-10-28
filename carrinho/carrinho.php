@@ -16,8 +16,40 @@ require "../query.php";
         <script>tailwind.config = {theme: {extend: {colors: {clifford: '#da373d',}}}}</script>
         <title>Document</title>
     </head>
-    <body class="bg-[url('../imagens/fundo_site.png')] p-[2vh]">
-      <div class="">
+    
+    <body class="bg-[url('../imagens/fundo_site.png')] ">
+    <header>
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+                    <div class="w-screen flex flex-row items-center p-2 justify-between bg-gray-400 shadow-xs">
+                        
+                        <div class="ml-8 text-lg text-gray-700 hidden md:flex">
+                            <a href="../home.php">
+                                <div class="flex items-center gap-3">
+                                    <img src="../imagens/logo.png" class="w-[60px] h-[60px] ">
+                                    <span class="font-bold text-blue-900 hover:text-blue-100">Cube Store</span>
+                                </div>
+                            </a>
+                        </div>
+                                <form class="w-screen md:w-1/3 h-10 bg-gray-200 cursor-pointer border border-gray-300 text-sm rounded-full flex" action="../pesquisar.php" method="post">
+                                    <input type="search" name="busca" placeholder="Search"
+                                    class="flex-grow px-4 rounded-l-full rounded-r-full text-sm focus:outline-none">
+                                    <button type="submit"><i class="fas fa-search m-3 mr-5 text-lg text-gray-700 w-4 h-4"></i></button>
+                                </form>
+                                <div class="flex flex-row-reverse mr-4 ml-4 md:hidden">
+                                <i class="fas fa-bars"></i>
+                            </div >
+                            <?php if($_SESSION["idacesso"]==1){?>
+                            <div class="flex flex-row-reverse mr-8 hidden md:flex">
+                                <a href="./modificarprods/todosprod.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Produtos</a>
+                            </div>
+                            <?php }elseif($_SESSION["idacesso"]==2){?>
+                            <div class="flex flex-row-reverse mr-8 hidden md:flex">
+                                <a href="../carrinho/carrinho.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="../imagens/carrinho.png" class="w-[40px] h-[40px] "></a>
+                            </div>
+                            <?php } ?>
+                </div>
+            </header>
+      <div class="m-[2vh]">
         <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
             <div class="rounded-lg md:w-2/3">
               <?php

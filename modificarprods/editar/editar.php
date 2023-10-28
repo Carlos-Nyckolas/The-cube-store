@@ -17,7 +17,6 @@ if($_FILES["img"]["size"]>0){
     $caminho = "../../imagens/";
     move_uploaded_file($tmp_name, $caminho.$nome);
     $caminho = "imagens/$nome";
-    echo 1;
 }else{
     require "../../conexao.php";
     $comando = "SELECT*FROM produto where idproduto = $id";

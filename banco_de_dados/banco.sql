@@ -46,6 +46,15 @@ FOREIGN KEY (idproduto)
 REFERENCES produto(idproduto)
 );
 
+-- criação da tabela feedback
+CREATE TABLE IF NOT EXISTS feedback(
+idfeedback INT(11) NOT NULL AUTO_INCREMENT,
+titulo VARCHAR(30) NOT NULL,
+mensagem VARCHAR(1000) NOT NULL,
+datahora DATETIME NOT NULL DEFAULT NOW(),
+PRIMARY KEY(idfeedback),
+);
+
 -- Inserção do nivel 1 de acesso
 INSERT INTO acesso (idacesso) VALUES (1);
 

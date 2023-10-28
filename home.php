@@ -33,12 +33,12 @@
                         <?php if($_SESSION["idacesso"]==1){?>
                     <div class="flex flex-row-reverse mr-8 hidden md:flex">
                         <a href="./modificarprods/todosprod.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Gerenciar</a>
-                        <a href="./sair.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Sair</a>
+                        <a href="./usuario/usuario.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img class=" h-[3vw]" src="./imagens/entrar.png" alt=""></a>
                     </div>
                         <?php }elseif($_SESSION["idacesso"]==2){?>
                     <div class="flex flex-row-reverse items-center mr-8 hidden md:flex ">
+                        <a href="./usuario/usuario.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="imagens/entrar.png" class="w-[40px] h-[40px] "></a>
                         <a href="./carrinho/carrinho.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="imagens/carrinho.png" class="w-[40px] h-[40px] "></a>
-                        <a href="./sair.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">Sair</a>
                     </div>
                         <?php } ?>
                 </div>
