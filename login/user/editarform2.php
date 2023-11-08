@@ -1,7 +1,7 @@
 <?php
 
 require "../../conexao.php";
-$email = $_POST["email"];
+$email = $GET["email"];
 $comando = "SELECT*FROM usuario where email ='$email'";
 require "../../query.php";
 if(mysqli_num_rows($query)==0){
