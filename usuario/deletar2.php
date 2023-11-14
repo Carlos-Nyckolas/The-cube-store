@@ -2,6 +2,7 @@
 
 require "../conexao.php";
 session_start();
+
 $comando='DELETE FROM carrinho WHERE idusuario='.$_SESSION["iduser"];
 require "../query.php";
 $comando='DELETE FROM usuario WHERE idusuario='.$_SESSION["iduser"];

@@ -24,12 +24,19 @@ $linha=mysqli_fetch_assoc($query);
         <div class="flex flex-col justify-around bg-gray-300 p-[5vh] rounded-xl">
             <span class="font-bold">Nome: </span><span class="text-blue-700 font-semibold"><?=$linha["nome"]?></span>
             <span class="font-bold">Email: </span><span class="text-blue-700 font-semibold"><?=$linha["email"]?></span>
+            <?php
+            $idacesso = $_SESSION["idacesso"];
+            if($idacesso==2){
+            ?>
             <a class="flex" href="deletar1.php">
                 <div class="mt-[3vh] bg-red-300 rounded-xl w-[15vw] p-[2vh] flex flex-row items-center justify-between">
                     <span class="text-red-800 ">DELETAR CONTA</span>
                     <img class="h-[7vh]" src="../imagens/X.png" alt="X vermelho">
                 </div>
             </a>
+            <?php
+            }
+            ?>
             <a href="../sair.php">
                 <div class="mt-[3vh] bg-yellow-300 rounded-xl w-[15vw] p-[2vh] flex flex-row items-center justify-between">
                     <span class="text-red-800 ">SAIR DA CONTA</span>

@@ -6,7 +6,7 @@ $arquivo = "
     <html>
         <p><b>Nome:</b>$nome</p>
         <p><b>E-mail:</b>$email</p>
-        <p><b>Mensagem:</b><a href='http://localhost/The-cube-store2.4/The-cube-store/login/user/editarform2.php?email=$email'>clique aqui para mudar sua senha</a></p>";
+        <p><b>Mensagem:</b><a href='http://localhost/The-cube-store/login/user/editarform2.php?email=$email'>clique aqui para mudar sua senha</a></p>";
 
 $destino = $email;
 $assunto = "Troca de senha";
