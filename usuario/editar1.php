@@ -9,9 +9,10 @@ if(!$query){
     die('ERRO');
 }
 $linha=mysqli_fetch_assoc($query);
+
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,32 +22,36 @@ $linha=mysqli_fetch_assoc($query);
 </head>
 <body class="bg-blue-200 ">
     <div class="flex justify-center items-center">
-    <div class="w-[25vw] bg-gray-900 rounded-lg overflow-hidden shadow-lg mt-[20vh]">
+    <div class="w-[35vw] bg-gray-900 rounded-lg overflow-hidden shadow-lg mt-[20vh]">
             <div class="border-b px-4 pb-6">
                 <div class="text-center my-4">
-                    <img class="h-32 w-32 rounded-full border-4 border-white dark:border-gray-800 mx-auto my-4"
-                        src='<?=$linha["imgperfil"]?>' alt="">
+                    <form action="editar2.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="<?=$linha["idusuario"]?>">
+                       <input type="file" name="img" value='<?=$linha["imgperfil"]?>'>
                     <div class="py-2">
-                        <h3 class="font-bold text-2xl text-gray-800 dark:text-white mb-1"><?=$linha["nome"]?></h3>
-                        <div class="inline-flex text-gray-700 dark:text-gray-300 items-center">
-                            <span>
-                                <?=$linha["email"]?>
-                            </span>
-                        </div>
+                        <input type="text" name="nome" value='<?=$linha["nome"]?>'>
                     </div>
                 </div>
                 <div class="flex gap-2 px-2">
+                <button class="flex-1 rounded-full bg-blue-600 dark:bg-blue-800 text-white dark:text-white antialiased font-bold hover:bg-blue-800 dark:hover:bg-blue-900 px-4 py-2">
+                        <a href="editar2.php?id=<?=$id?>">Editar</a>  
+                    </button>
                     <button class="flex-1 rounded-full bg-blue-600 dark:bg-blue-800 text-white dark:text-white antialiased font-bold hover:bg-blue-800 dark:hover:bg-blue-900 px-4 py-2">
-                        <a href="editar1.php?id=<?=$linha["idusuario"]?>">Editar perfil</a>  
+                        <a href="../sair.php">sair da conta</a>  
                     </button>
                     <button class="flex-1 rounded-full bg-blue-600 dark:bg-blue-800 text-white dark:text-white antialiased font-bold hover:bg-blue-800 dark:hover:bg-blue-900 px-4 py-2">
                         <a href="../home.php">voltar</a>  
                     </button>
+                    <?php $idacesso = $_SESSION["idacesso"];?>
+                    <?php if($idacesso==2){?>
+                    <button class="flex-1 rounded-full bg-blue-600 dark:bg-blue-800 text-white dark:text-white antialiased font-bold hover:bg-blue-800 dark:hover:bg-blue-900 px-4 py-2">
+                        <a href="deletar1.php">Excluir conta</a> 
+                    </button>
+                    <?php }?>
                 </div>
             </div>
         </div>
 </div>
 </div>
-
 </body>
 </html>

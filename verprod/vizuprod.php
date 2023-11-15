@@ -18,16 +18,16 @@ $linha=mysqli_fetch_assoc($query);
         <script>tailwind.config = {theme: {extend: {colors: {clifford: '#da373d',}}}}</script>
         <title>Document</title>
     </head>
-    <body class="bg-[url('../imagens/fundo_site.png')]">
+    <body class="bg-blue-200 ">
         <header>
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-                    <div class="w-screen flex flex-row items-center p-2 justify-between bg-gray-400 shadow-xs">
+                    <div class="w-screen flex flex-row items-center p-2 justify-between bg-white shadow-xs">
                         
                         <div class="ml-8 text-lg text-gray-700 hidden md:flex">
                             <a href="../home.php">
                                 <div class="flex items-center gap-3">
                                     <img src="../imagens/logo.png" class="w-[60px] h-[60px] ">
-                                    <span class="font-bold text-blue-900 hover:text-blue-100">Cube Store</span>
+                                    <span class="font-bold text-black hover:text-red-500">Cube Store</span>
                                 </div>
                             </a>
                         </div>

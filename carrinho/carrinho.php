@@ -17,16 +17,15 @@ require "../query.php";
         <title>Document</title>
     </head>
     
-    <body class="bg-[url('../imagens/fundo_site.png')] ">
+    <body class="bg-blue-200 ">
     <header>
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-                    <div class="w-screen flex flex-row items-center p-2 justify-between bg-gray-400 shadow-xs">
-                        
+                    <div class="w-screen flex flex-row items-center p-2 justify-between bg-white shadow-xs">
                         <div class="ml-8 text-lg text-gray-700 hidden md:flex">
                             <a href="../home.php">
                                 <div class="flex items-center gap-3">
                                     <img src="../imagens/logo.png" class="w-[60px] h-[60px] ">
-                                    <span class="font-bold text-blue-900 hover:text-blue-100">Cube Store</span>
+                                    <span class="font-bold text-blue-900 hover:text-red-500">Cube Store</span>
                                 </div>
                             </a>
                         </div>
@@ -44,7 +43,11 @@ require "../query.php";
                             </div>
                             <?php }elseif($_SESSION["idacesso"]==2){?>
                             <div class="flex flex-row-reverse mr-8 hidden md:flex">
-                                <a href="../carrinho/carrinho.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="../imagens/carrinho.png" class="w-[40px] h-[40px] "></a>
+                              <a href="../usuario/usuario.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                  <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                </svg>
+                              </a>
                             </div>
                             <?php } ?>
                 </div>

@@ -16,7 +16,7 @@ require "query.php";?>
         <script src="https://cdn.tailwindcss.com"></script>
         <script>tailwind.config = {theme: {extend: {colors: {clifford: '#da373d',}}}}</script>
         </head>
-        <body class="bg-blue-400 overflow-x-hidden overflow-y-auto">
+        <body class="bg-blue-200 overflow-x-hidden overflow-y-auto">
         <header>
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
                 <div class="w-screen flex flex-row items-center p-2 justify-between bg-white shadow-xs">
@@ -58,7 +58,7 @@ require "query.php";?>
                                 <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
                             </svg>
                         </a>
-                        <a href="./carrinho/carrinho.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="imagens/carrinho.png" class="w-[40px] h-[40px] "></a>
+                        <a href="./carrinho/carrinho.php" class="text-gray-900 hover:text-white text-center px-4 py-2 m-2"><img src="imagens/carrinho.png" class="w-[25px] h-[25px] "></a>
                     </div>
                         <?php } ?>
                 </div>
