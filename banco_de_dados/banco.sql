@@ -15,6 +15,7 @@ nome VARCHAR(100) NOT NULL,
 senha VARCHAR(12) NOT NULL,
 email VARCHAR(50) NOT NULL, 
 idacesso INT(11) NOT NULL DEFAULT 2,
+imgperfil VARCHAR(1000) DEFAULT 'https://cdn-icons-png.flaticon.com/512/3106/3106921.png',
 CONSTRAINT fk_acesso_usuario
 FOREIGN KEY (idacesso)
 REFERENCES acesso(idacesso),
@@ -52,7 +53,7 @@ idfeedback INT(11) NOT NULL AUTO_INCREMENT,
 titulo VARCHAR(30) NOT NULL,
 mensagem VARCHAR(1000) NOT NULL,
 datahora DATETIME NOT NULL DEFAULT NOW(),
-PRIMARY KEY(idfeedback),
+PRIMARY KEY(idfeedback)
 );
 
 -- Inserção do nivel 1 de acesso
