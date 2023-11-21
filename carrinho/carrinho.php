@@ -55,7 +55,11 @@ $iduser = $_SESSION["iduser"];
               <?php
                   $soma = 0;
                   $frete = 10;
-                  while($linha=mysqli_fetch_assoc($query)): 
+                  $x = count($_SESSION["carrinho"]["iduser"]);
+                  for($i=0; $i<=$x; $i++){
+                    $comando = "Select*FROM produto where idproduto = $i";
+                    require "../query.php";
+                  $linha=mysqli_fetch_assoc($query) 
                   $soma = $soma + ($linha["preco"]*$linha["quantidade"]);
                 ?>
               <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex ">
@@ -85,7 +89,7 @@ $iduser = $_SESSION["iduser"];
                     </div>
                   </div>
               </div>
-              <?php endwhile; ?>
+              <?php } ?>
             </div>
             <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
               <div class="mb-2 flex justify-between">
