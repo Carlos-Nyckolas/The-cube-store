@@ -2,10 +2,7 @@
 session_start();
 require "../conexao.php"; 
 $iduser = $_SESSION["iduser"];
-$comando = "SELECT c.*, p.* FROM carrinho c INNER JOIN produto p ON c.idproduto = p.idproduto and c.idusuario = $iduser";
-require "../query.php";
-
-?> 
+?>
 <!DOCTYPE html>
 <html lang="PT-BR">
     <head>
@@ -106,7 +103,15 @@ require "../query.php";
                       <p class="mb-1 text-lg font-bold"><?='R$' . number_format($soma+$frete, 2, ',', '.');?></p>
                     </div>
                 </div>
-                  <button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Compre agora</button>
+                  <form action="venda/add.php" method="post">
+                    <input type="hidden" value="<?= $soma ?>">
+                    <?php
+                    while (mysqli_fetch_assoc($query)){
+                      
+                    }
+                    ?>
+                    <button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Compre agora</button>
+                  </form>
             </div>
         </div>
       </div>

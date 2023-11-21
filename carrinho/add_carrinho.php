@@ -1,15 +1,21 @@
 <?php
+
 session_start();
-require "../conexao.php";
+$_SESSION["carrinho"]= array();
 $idprod=$_POST["id"];
 $quantidade=$_POST["quantidade"];
-$iduser=$_SESSION["iduser"];
 
-$comando = "INSERT INTO carrinho(idproduto, quantidade, idusuario) VALUES($idprod, $quantidade, $iduser)";
-require "../query.php";
-if (!$query){
-    die("ERRO");
+if (isset($_SESSION["iduser"])){
+$iduser=$_SESSION["iduser"];
+    $_SESSION["carrinho"]["iduser"] = $iduser;
+}else{
+    $_SESSION["carrinho"]["iduser"] = 'default';
 }
+$x = count($_SESSION["carrinho"]["iduser"]);
+$_SESSION["carrinho"]["iduser"][$x] = $idprod;
+$n = count($_SESSION["carrinho"]["iduser"][$x]);
+$_SESSION["carrinho"]["iduser"][$x][$n] = $quantidade;
+
 header('location: carrinho.php');
 
 ?>

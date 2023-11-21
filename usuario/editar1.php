@@ -22,7 +22,7 @@ $linha=mysqli_fetch_assoc($query);
 </head>
 <body class="bg-blue-200 ">
     <div class="flex justify-center items-center">
-    <div class="w-[35vw] bg-gray-900 rounded-lg overflow-hidden shadow-lg mt-[20vh]">
+    <div class="w-[35vw] bg-gray-300 rounded-lg overflow-hidden shadow-lg mt-[20vh]">
             <div class="border-b px-4 pb-6">
                 <div class="text-center my-4">
                     <form action="editar2.php" method="post" enctype="multipart/form-data">

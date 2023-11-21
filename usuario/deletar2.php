@@ -9,8 +9,7 @@ $comando='DELETE FROM usuario WHERE idusuario='.$_SESSION["iduser"];
 require "../query.php";
 if($query){
     session_destroy();
-    echo 'Excluído com sucesso!<br>';
-    echo '<a href="../index.php">Voltar ao index</a>';
+    header('Location:../index.php');
 }else{
     echo 'Ocorreu um erro<br>';
     echo '<a href="usuario.php">Voltar</a>';
